@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Penilaian 360 Degree</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #007bff;
+      color: white;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .success {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form Penilaian 360 Degree</h2>
+
+  <form id="penilaianForm">
+    <label>Nama Penilai</label>
+    <input type="text" id="namaPenilai" required>
+
+    <label>Jabatan Penilai </label>
+    <select id="jabatanPenilai" required>
+      <option value="">-- Pilih Jabatan  --</option>
+      <option value="gm"> General Manager </option>
+      <option value="ceo">CEO Region </option>
+      <option value="deputi">Deputy</option>
+      <option value="sm">Senior Manager</option>
+      <option value="manager">Manager</option>
+      <option value="asmen">Asisten Manager</option>
+      <option value="staf">staf</option>  
+    </select>
+
+
+    <label>Nama yang Dinilai</label>
+    <input type="text" id="namaDinilai" required>
+
+    <label>Jabatan yang Dinilai </label>
+    <select id="jabatanDinilai" required>
+      <option value="">-- Pilih Jabatan  --</option>
+      <option value="General Manager"> General Manager </option>
+      <option value="CEO Region">CEO Region </option>
+      <option value="Deputi">Deputy</option>
+      <option value="Senior Manager">Senior Manager</option>
+      <option value="Manager">Manager</option>
+      <option value="Asmen">Asisten Manager</option>
+      <option value="Staf">staf</option>  
+    </select>
+
+
+
+    <label>Region </label>
+    <select id="region" required>
+      <option value="">-- Pilih Region --</option>
+       <option value="Kantor Pusat">Kantor Pusat</option>
+      <option value="Region 1">Region 1 </option>
+      <option value="Region 2">Region 2 </option>
+      <option value="Region 3">Region 3</option>
+      <option value="Region 4">Region 4</option>
+      <option value="Region 5">Region 5</option>
+      <option value="Region 6">Region 6</option>
+      <option value="Region 7">Region 7</option>
+      <option value="Region 8">Region 8</option>
+      <option value="Region 9">Region 9</option>
+      <option value="Region 10">Region 10</option>  
+    </select>
+    
+    <label> Divisi</label>
+    <select id="divisi" required>
+      <option value="">-- Pilih Divisi--</option>
+      <option value="Divisi OPR1">Divisi OPR 1 </option>
+      <option value="Divisi OPR2">Divisi OPR 2 </option>
+      <option value="Divisi OPS">Divisi OPS</option>
+      <option value="Divisi Bisnis & Marketing ">Divisi Bisnis Marketing </option>
+      <option value="Divisi INA">Divisi INA </option>
+      <option value="Divisi PLM">Divisi PLM </option>
+      <option value="Divisi FRM">Divisi FRM </option>
+      <option value="Divisi HCC">Divisi HCC </option>
+      <option value="Divisi CSI">Divisi CSI </option>
+      <option value="Divisi Support Bisnis">Divisi Support Bisnis</option>  
+    </select>
+
+
+    <label>Hubungan Penilaian</label>
+    <select id="hubungan" required>
+      <option value="">-- Pilih Hubungan --</option>
+      <option value="Atasan kepada Bawahan">Atasan kepada Bawahan</option>
+      <option value="Bawahan kepada Atasan">Bawahan kepada Atasan</option>
+      <option value="Sesama Rekan Satu Level">Sesama Rekan Satu Level</option>
+    </select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Kriteria Penilaian</th>
+          <th>Nilai (1-5)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Leadership / kepemimpinan</td>
+          <td><input type="number" id="leadership" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td>Teamwork / saling kerja sama </td>
+          <td><input type="number" id="teamwork" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td>Communication / komunikasi </td>
+          <td><input type="number" id="communication" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td>Problem Solving / Pemecahan masalah</td>
+          <td><input type="number" id="problemSolving" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td>Innovation / ide, gagasan </td>
+          <td><input type="number" id="innovation" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td>Responsibility / Tanggung jawab</td>
+          <td><input type="number" id="responsibility" min="1" max="5" required></td>
+        </tr>
+        <tr>
+          <td>Transparancy / terbuka, jujur </td>
+          <td><input type="number" id="transparancy" min="1" max="5" required></td>
+        </tr>
+         <tr>
+          <td>Role model / Teladan yang baik </td>
+          <td><input type="number" id="rolemodel" min="1" max="5" required></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="submit">Kirim Penilaian</button>
+    <div class="success" id="successMsg"></div>
+  </form>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwejH1_B5uCCf978QpXGrx7K9YrNdBqfHPsDY8rGeKhdaIQcUqfWHjbZOsSWBfURjY/exec";
+
+    document.getElementById("penilaianForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const data = {
+        namaPenilai: document.getElementById("namaPenilai").value,
+        jabatanPenilai: document.getElementById("jabatanPenilai").value,
+        namaDinilai: document.getElementById("namaDinilai").value,
+        jabatanDinilai: document.getElementById("jabatanDinilai").value,
+
+        region: document.getElementById("region").value,
+        divisi: document.getElementById("divisi").value,
+        hubungan: document.getElementById("hubungan").value,
+        leadership: document.getElementById("leadership").value,
+        teamwork: document.getElementById("teamwork").value,
+        communication: document.getElementById("communication").value,
+        problemSolving: document.getElementById("problemSolving").value,
+        innovation: document.getElementById("innovation").value,
+        responsibility: document.getElementById("responsibility").value,
+        transparancy: document.getElementById("transparancy").value,
+        rolemodel: document.getElementById("rolemodel").value
+
+      };
+
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      }).then(() => {
+        document.getElementById("successMsg").innerText = "✅ Penilaian berhasil dikirim!";
+        document.getElementById("penilaianForm").reset();
+      }).catch(() => {
+        alert("Terjadi kesalahan saat mengirim data.");
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
