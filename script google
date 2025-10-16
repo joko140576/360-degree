@@ -1,0 +1,25 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Form360");
+  var data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    new Date(),
+    data.namaPenilai,
+    data.jabatanPenilai,
+    data.namaDinilai,
+    data.jabatanDinilai,
+    data.region,
+    data.divisi,
+    data.hubungan,
+    data.leadership,
+    data.teamwork,
+    data.communication,
+    data.problemSolving,
+    data.innovation,
+    data.responsibility,
+    data.transparancy,
+    data.rolemodel
+  ]);
+
+  return ContentService.createTextOutput("Sukses").setMimeType(ContentService.MimeType.TEXT);
+}
